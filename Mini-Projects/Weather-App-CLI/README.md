@@ -28,16 +28,6 @@ No clutter, no unnecessary dependencies — just clean requests, clean output, a
 
 ---
 
-## 📸 Preview
-
-<div align="center">
-  <img src="assets/screenshot.png" alt="Weather App CLI Screenshot" width="700"/>
-</div>
-
-> 💡 Replace `assets/screenshot.png` with an actual screenshot of your terminal output. Create an `assets` folder in your project root and drop the image there.
-
----
-
 ## ✨ Features
 
 - 🌍 Fetch real-time weather data for **any city** worldwide
