@@ -1,57 +1,129 @@
-# Duplicate File Finder (CLI)
+<div align="center">
 
-A simple Python command-line tool that scans a folder — and all of its
-sub-folders — to find files that are exact duplicates of each other,
-based on their **content**, not their file name.
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:6a11cb,100:2575fc&height=220&section=header&text=Duplicate%20File%20Finder&fontSize=45&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Find.%20Compare.%20Clean%20Up.&descAlignY=58&descSize=18" width="100%"/>
 
-## Why content-based comparison?
+<br/>
 
-Two files can have completely different names but identical content
-(for example, `image.jpg` and `image_copy.jpg`). This tool uses the
-**SHA-256** hashing algorithm to fingerprint each file's actual data,
-so it correctly identifies duplicates even when names don't match, and
-correctly ignores files that happen to share a name but hold different
-content.
+<a href="#">
+  <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=24&duration=3000&pause=800&color=2575FC&center=true&vCenter=true&width=650&lines=A+Smart+CLI+Tool+Built+in+Python+%F0%9F%90%8D;Finds+Duplicate+Files+by+Content%2C+Not+Name;SHA-256+Powered+%7C+Memory+Efficient+%7C+Fast;Built+With+%E2%9D%A4%EF%B8%8F+by+Mayank+Bisht" alt="Typing SVG" />
+</a>
 
-## Features
+<br/><br/>
 
-- Recursively scans a folder and all its sub-folders
-- Detects duplicates using SHA-256 content hashing
-- Reads files in small chunks (4096 bytes) so even large files don't
-  get loaded fully into memory
-- Displays the file size of each duplicate group (in B / KB / MB)
-- Shows a clear summary: folders scanned, files scanned, duplicate
-  groups, and total duplicate files
-- Handles common real-world errors gracefully:
-  - Empty input
-  - Invalid or missing folder path
-  - Permission denied
-  - File access errors
-  - Manual interruption (`Ctrl + C`)
+<img src="https://img.shields.io/badge/Python-3.7+-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
+<img src="https://img.shields.io/badge/Platform-CLI-000000?style=for-the-badge&logo=windowsterminal&logoColor=white"/>
+<img src="https://img.shields.io/badge/Hash%20Algorithm-SHA--256-critical?style=for-the-badge&logo=letsencrypt&logoColor=white"/>
+<img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge"/>
 
-## Requirements
+<br/>
 
-None. This project only uses Python's standard library
-(`os`, `pathlib`, `hashlib`, `collections`).
+<img src="https://img.shields.io/github/stars/MayankBisht-24/Code-Vault-Python?style=social"/>
+<img src="https://img.shields.io/github/forks/MayankBisht-24/Code-Vault-Python?style=social"/>
+<img src="https://img.shields.io/github/last-commit/MayankBisht-24/Code-Vault-Python?color=blue"/>
 
-Python 3.7 or newer is recommended.
+</div>
 
-## Usage
+<br/>
+
+## 📌 About The Project
+
+> **Ever had a folder so messy you had 5 copies of the same photo with 5 different names?**
+> This tool hunts them down — not by matching filenames, but by reading the actual **content** of every file using **SHA-256 hashing**. Same content = same fingerprint = duplicate caught. 🕵️‍♂️
+
+Whether you're cleaning up a **Photos** folder, a **Downloads** graveyard, or a messy **backup drive**, this CLI tool scans everything recursively and gives you a clean, readable report — including file sizes, so you know exactly how much space you can reclaim.
+
+<br/>
+
+## ✨ Features
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### 🔍 Smart Detection
+- Content-based duplicate detection (SHA-256)
+- Recursively scans **all** sub-folders
+- Ignores filenames — only content matters
+- Reads files in `4096-byte` chunks (memory efficient)
+
+</td>
+<td width="50%" valign="top">
+
+### 📊 Clean Reporting
+- Displays duplicate file **size** (B / KB / MB)
+- Full file paths for original + duplicates
+- Scan summary: folders, files, groups, duplicates
+- Clear "no duplicates found" message
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 🛡️ Rock-Solid Error Handling
+- Empty / invalid path protection
+- Handles permission-denied errors gracefully
+- Catches file access errors mid-scan
+- Graceful `Ctrl + C` exit
+
+</td>
+<td width="50%" valign="top">
+
+### ⚡ Built to Scale
+- Works on huge folder trees without memory issues
+- Zero external dependencies
+- Pure Python standard library
+- Clean, modular, readable functions
+
+</td>
+</tr>
+</table>
+
+<br/>
+
+## 🛠️ Tech Stack
+
+<div align="center">
+<img src="https://skillicons.dev/icons?i=python,git,github,vscode" />
+</div>
+
+<br/>
+
+## 📂 Project Structure
+
+```
+Duplicate-File-Finder-CLI/
+├── duplicate_file_finder.py    # Main script
+├── README.md                   # You're reading it 👀
+├── requirements.txt            # No external deps needed
+└── .gitignore                  # Keeps the repo clean
+```
+
+<br/>
+
+## 🚀 Getting Started
+
+### Prerequisites
+```bash
+Python 3.7 or higher
+```
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/MayankBisht-24/Code-Vault-Python.git
+
+# Navigate to the project
+cd Code-Vault-Python/Mini-Projects/Duplicate-File-Finder-CLI
+
+# Run it — no pip install needed!
 python duplicate_file_finder.py
 ```
 
-You'll be prompted to enter a folder path:
+<br/>
 
-```
-Enter the folder path to scan: D:\Photos
-```
-
-The tool will then scan the folder and print out any duplicate groups
-it finds, along with a summary.
-
-## Example Output
+## 🎬 Demo
 
 ```
 ========================================
@@ -76,43 +148,90 @@ Summary
 ========================================
 Folders Scanned  : 12
 Files Scanned    : 148
-Duplicate Groups  : 1
+Duplicate Groups : 1
 Duplicate Files  : 1
 ========================================
 ```
 
-## Project Structure
+<br/>
 
+## ⚙️ How It Works
+
+```mermaid
+flowchart LR
+    A[📁 Get Folder Path] --> B[🔄 Walk All Sub-folders]
+    B --> C[🧮 Hash Every File - SHA256]
+    C --> D{Same Hash?}
+    D -- Yes --> E[📦 Group as Duplicates]
+    D -- No --> F[✅ Unique File]
+    E --> G[📊 Display Report + Summary]
+    F --> G
 ```
-Duplicate-File-Finder/
-├── duplicate_file_finder.py   # Main script
-├── README.md                  # Project documentation
-├── requirements.txt           # Dependencies (none, standard library only)
-└── .gitignore                 # Files/folders excluded from git
-```
 
-## How It Works (Under the Hood)
+| Function | Responsibility |
+|---|---|
+| `get_folder_path()` | Validates and returns a usable folder path |
+| `calculate_hash()` | Hashes a file in small chunks (memory-safe) |
+| `format_size()` | Converts bytes into readable KB/MB format |
+| `find_duplicates()` | Walks the folder tree and groups files by hash |
+| `display_duplicates()` | Prints duplicate groups + final summary |
+| `main()` | Orchestrates the whole flow + error handling |
 
-1. **`get_folder_path()`** — asks the user for a folder path and keeps
-   asking until a valid, existing directory is provided.
-2. **`calculate_hash()`** — reads a file in small chunks and computes
-   its SHA-256 hash, so memory usage stays low regardless of file size.
-3. **`find_duplicates()`** — walks through the folder tree, hashes
-   every file, and groups files that share the same hash.
-4. **`format_size()`** — converts a raw byte count into a readable
-   B / KB / MB string.
-5. **`display_duplicates()`** — prints the duplicate groups along with
-   file sizes, and a final summary of the scan.
-6. **`main()`** — coordinates everything and catches errors like
-   permission issues or a manual `Ctrl + C` interruption.
+<br/>
 
-## Possible Future Improvements
+## 🗺️ Roadmap
 
-- Option to automatically delete or move duplicate files
-- Export results to a CSV or text report
-- Multi-threaded hashing for faster scans on large folders
-- Filter by file type or minimum file size
+- [x] Content-based duplicate detection
+- [x] Human-readable file size (KB/MB)
+- [ ] Auto-delete or move duplicates option
+- [ ] Export report to CSV
+- [ ] Multi-threaded hashing for faster scans
+- [ ] Filter by file type / minimum size
 
-## License
+Got an idea? Open an issue — contributions are always welcome! 🙌
 
-Feel free to use, modify, and share this project for learning purposes.
+<br/>
+
+## 🤝 Contributing
+
+Contributions make the open-source community amazing. Any contribution is **greatly appreciated**.
+
+1. Fork the repo
+2. Create your branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+<br/>
+
+## 📜 License
+
+Distributed under the **MIT License**. Free to use, modify, and share for learning purposes.
+
+<br/>
+
+## 👨‍💻 Author
+
+<div align="center">
+
+### Mayank Bisht
+
+<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=500&size=18&duration=2500&pause=1000&color=6A11CB&center=true&vCenter=true&width=450&lines=BCA+Student+%7C+Data+Science+Specialization;Python+Developer+%7C+Problem+Solver;Always+Building%2C+Always+Learning+%F0%9F%9A%80" alt="Author Typing SVG" />
+
+<br/>
+
+<a href="https://github.com/MayankBisht-24">
+  <img src="https://img.shields.io/badge/GitHub-MayankBisht--24-181717?style=for-the-badge&logo=github&logoColor=white"/>
+</a>
+
+<br/><br/>
+
+**If this project helped you clean up your storage, consider dropping a ⭐ — it means a lot!**
+
+</div>
+
+<br/>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2575fc,100:6a11cb&height=120&section=footer" width="100%"/>
+
+</div>
