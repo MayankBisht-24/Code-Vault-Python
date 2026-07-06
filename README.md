@@ -10,7 +10,7 @@
 
 <img src="https://img.shields.io/badge/Python-3.7+-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
 <img src="https://img.shields.io/badge/Status-Actively%20Learning-brightgreen?style=for-the-badge"/>
-<img src="https://img.shields.io/badge/License-MIT-lightgrey?style=for-the-badge"/>
+
 <img src="https://img.shields.io/github/last-commit/MayankBisht-24/Code-Vault-Python?style=for-the-badge&color=blue"/>
 
 <br/>
@@ -18,10 +18,6 @@
 <img src="https://img.shields.io/github/stars/MayankBisht-24/Code-Vault-Python?style=social"/>
 <img src="https://img.shields.io/github/forks/MayankBisht-24/Code-Vault-Python?style=social"/>
 <img src="https://img.shields.io/github/watchers/MayankBisht-24/Code-Vault-Python?style=social"/>
-
-<br/><br/>
-
-<img src="https://komarev.com/ghpvc/?username=MayankBisht-24&repo=Code-Vault-Python&label=Repository%20Views&color=6a11cb&style=flat" alt="visitor count"/>
 
 </div>
 
@@ -83,11 +79,11 @@ Code-Vault-Python/
 │   ├── Stone-Paper-Scissors/
 │   ├── Password-Generator/
 │   ├── File-Organizer/
-│   ├── Weather-App/
+│   ├── Weather-App-CLI/
 │   └── Duplicate-File-Finder-CLI/
 │
 ├── README.md
-└── LICENSE
+
 ```
 
 > As new projects are added, they follow the same structure: their own folder inside `Mini-Projects/`, with a dedicated `README.md`, source code, and any supporting files.
@@ -103,7 +99,7 @@ Code-Vault-Python/
 | 1 | 🪨 **Stone Paper Scissors** | Classic game built in Python with user input handling and game logic | Conditionals, Random Module, Functions | [View](./Mini-Projects/Stone-Paper-Scissors) |
 | 2 | 🔐 **Password Generator** | Generates secure, randomized passwords based on user preferences | String Manipulation, Random Module, Loops | [View](./Mini-Projects/Password-Generator) |
 | 3 | 🗃️ **File Organizer** | Automatically sorts files into folders based on file type | OS Module, Pathlib, File Handling | [View](./Mini-Projects/File-Organizer) |
-| 4 | 🌦️ **Weather App** | Fetches live weather data using the OpenWeatherMap API | API Requests, JSON Parsing, Error Handling | [View](./Mini-Projects/Weather-App) |
+| 4 | 🌦️ **Weather App** | Fetches live weather data using the OpenWeatherMap API | API Requests, JSON Parsing, Error Handling | [View](./Mini-Projects/Weather-App-CLI) |
 | 5 | 🧬 **Duplicate File Finder (CLI)** | Detects duplicate files by content using SHA-256 hashing | Hashlib, Recursion, File I/O, Error Handling | [View](./Mini-Projects/Duplicate-File-Finder-CLI) |
 
 </div>
@@ -175,28 +171,20 @@ Code-Vault-Python/
 
 <br/>
 
-## 📊 Current Progress
-
-<div align="center">
-
-**Mini-Projects Completed**
-
-![Progress](https://progress-bar.dev/5/?scale=10&title=Projects&width=400&color=6a11cb)
-
-</div>
-
-<br/>
-
 ## 🔮 Future Plans
 
-- Add more advanced Python projects (automation, APIs, data-driven tools)
-- Start incorporating Data Science libraries (Pandas, NumPy, Matplotlib)
-- Improve documentation quality with usage GIFs/screenshots per project
-- Explore basic web development to build simple project front-ends
+- Build automation tools using Python
+- Learn SQLite and build database-driven applications
+- Build web applications using Flask and FastAPI
+- Create Data Science projects using Pandas and NumPy
+- Add screenshots and demos for each project
+- Continue building real-world Python projects consistently
 
 <br/>
 
 ---
+
+
 
 ## 📈 Repository Statistics
 
@@ -258,8 +246,7 @@ Each project is self-contained inside its own folder under `Mini-Projects/`.
 # Navigate to any project folder
 cd Mini-Projects/Duplicate-File-Finder-CLI
 
-# Check for a requirements.txt and install if present
-pip install -r requirements.txt
+# Install dependencies only if the selected project contains a requirements.txt file.
 
 # Run the project
 python duplicate_file_finder.py
@@ -288,7 +275,7 @@ Code-Vault-Python/
 │   │   ├── file_organizer.py
 │   │   └── README.md
 │   │
-│   ├── Weather-App/
+│   ├── Weather-App-CLI/
 │   │   ├── weather_app.py
 │   │   ├── requirements.txt
 │   │   └── README.md
@@ -299,7 +286,7 @@ Code-Vault-Python/
 │       └── README.md
 │
 ├── README.md
-└── LICENSE
+
 ```
 
 <br/>
@@ -328,12 +315,6 @@ If you spot a bug or have an idea for improvement, feel free to open an [Issue](
 
 <br/>
 
-## 📜 License
-
-This repository is licensed under the **MIT License** — free to use, learn from, and build upon.
-
-<br/>
-
 ## 💖 Support
 
 If this repository helped you or inspired your own learning journey:
@@ -343,28 +324,6 @@ If this repository helped you or inspired your own learning journey:
 - 🐛 Report issues or suggest improvements
 
 <br/>
-
-## 🔗 Connect With Me
-
-<div align="center">
-
-<a href="https://www.linkedin.com/in/your-linkedin-handle">
-  <img src="https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
-</a>
-<a href="https://your-portfolio-link.com">
-  <img src="https://img.shields.io/badge/Portfolio-Visit-000000?style=for-the-badge&logo=vercel&logoColor=white"/>
-</a>
-<a href="https://github.com/MayankBisht-24">
-  <img src="https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white"/>
-</a>
-
-</div>
-
-> 📝 *Replace the LinkedIn and Portfolio links above with your actual profile URLs.*
-
-<br/>
-
----
 
 <div align="center">
 
