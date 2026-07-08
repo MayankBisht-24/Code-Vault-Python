@@ -1,45 +1,96 @@
-# 📱 QR Code Generator (CLI)
+<div align="center">
 
-A beginner-friendly, menu-driven **command line QR code generator** built in Python.
-Turn plain text, URLs, emails, phone numbers, Wi-Fi credentials, and social links
-into scannable QR codes — with custom colors, transparent backgrounds, logos,
-multiple export formats, and bulk generation from a file.
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2c3e50,100:3498db&height=200&section=header&text=QR%20Code%20Generator&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=A%20Sleek,%20Menu-Driven%20CLI%20Tool%20for%20Every%20QR%20Need&descAlignY=55&descSize=18" width="100%"/>
 
-![Example QR Code](assets/example_qr.png)
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=800&color=3498DB&center=true&vCenter=true&width=600&lines=Text+%E2%86%92+QR;URL+%E2%86%92+QR;Wi-Fi+%E2%86%92+QR;Email+%E2%86%92+QR;Anything+%E2%86%92+QR+%F0%9F%93%B1" alt="Typing SVG" />
+
+<br/>
+
+![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![qrcode](https://img.shields.io/badge/qrcode-8.2-2ecc71?style=for-the-badge)
+![Pillow](https://img.shields.io/badge/Pillow-12.3-e74c3c?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
+
+![Made with Love](https://img.shields.io/badge/Made%20with-%E2%9D%A4-red?style=flat-square)
+![Author](https://img.shields.io/badge/Author-Mayank%20Bisht-3498db?style=flat-square)
+
+</div>
 
 ---
 
+## 📖 Overview
+
+**QR Code Generator** is a beginner-friendly yet feature-rich **command line tool**
+written in Python that converts plain text, URLs, emails, phone numbers, Wi-Fi
+credentials, and social media links into scannable QR codes — complete with
+custom colors, transparent backgrounds, embedded logos, multiple export
+formats, and bulk generation from a file.
+
+It's built with clean, modular, well-documented code, making it just as
+useful as a learning reference as it is as a practical tool.
+
+<div align="center">
+<img src="assets/example_qr.png" width="220" alt="Example QR Code"/>
+
+<sub>👆 Scan me — this QR points to github.com</sub>
+</div>
+
+<br/>
+
 ## ✨ Features
 
-### 📥 Input
-- Plain text
-- URLs / websites
-- Email addresses (`mailto:` with optional subject & body)
-- Phone numbers (`tel:` format)
-- Wi-Fi credentials (auto-generates a scan-to-connect QR)
-- Social media links
+<table>
+<tr>
+<td width="50%" valign="top">
 
-### ✅ Validation
-- Empty input is rejected
-- Invalid filenames (illegal characters) are rejected
-- Extra whitespace is trimmed automatically
-- Graceful handling of `Ctrl + C` (KeyboardInterrupt) and closed input streams
+### 📥 Input Types
+- 📝 Plain Text
+- 🔗 URLs / Websites
+- 📧 Email (`mailto:` + subject/body)
+- 📞 Phone Numbers (`tel:`)
+- 📶 Wi-Fi Credentials (scan-to-connect)
+- 📱 Social Media Links
 
-### 🧩 QR Generation
-- Generate a single QR code, or many at once from a text file
-- Save as **PNG**, **JPG**, or **SVG**
-- Custom filename, with a sensible default (`qr_code.png`) if left blank
-- Auto-creates the `output/` folder if it doesn't exist
+</td>
+<td width="50%" valign="top">
 
-### 🎨 Image Customization
-- Adjustable QR size (box size)
-- Adjustable border/quiet-zone size
-- Selectable error-correction level: Low, Medium, Quartile, High
-- Custom fill color and background color (named colors like `blue`, or hex like `#3498db`)
-- Transparent background option
-- Add a logo image to the center of the QR code
+### 🎨 Customization
+- 📏 Adjustable QR size & border
+- 🛡️ 4 error-correction levels
+- 🎨 Custom fill & background color
+- 🌫️ Transparent background
+- 🖼️ Center logo embedding
+- 📄 Export as PNG / JPG / SVG
 
-### 🖥️ User Menu
+</td>
+</tr>
+</table>
+
+### ✅ Validation & Error Handling
+
+| Scenario | Behavior |
+|---|---|
+| Empty input | ❌ Rejected with a clear message |
+| Invalid filename | ❌ Rejected — illegal characters flagged |
+| Extra whitespace | 🧹 Automatically trimmed |
+| `Ctrl + C` | 🛑 Caught gracefully, no ugly traceback |
+| Closed input stream (`EOF`) | 🛑 Handled gracefully |
+| `PermissionError` on save | ⚠️ Reported, no crash |
+| Any unexpected exception | ⚠️ Caught and reported |
+
+### 🌟 Bonus Features
+
+| | | |
+|---|---|---|
+| ⭐ Colored QR Codes | ⭐ Custom Background Color | ⭐ Transparent Background |
+| ⭐ Center Logo Embedding | ⭐ Bulk Generation from Text File | ⭐ Instant Preview |
+| ⭐ SVG Export | ⭐ JPG Export | ⭐ Beginner-Friendly Code |
+
+---
+
+## 🖥️ User Menu
+
 ```
 =========================
       QR Generator
@@ -50,7 +101,8 @@ multiple export formats, and bulk generation from a file.
 3. Exit
 ```
 
-### 📤 Output
+## 📤 Sample Output
+
 ```
 ✅ QR Code Generated Successfully!
 
@@ -59,21 +111,22 @@ Saved At:
 output/my_qr.png
 ```
 
-### 🛡️ Error Handling
-- Invalid input (empty fields, bad emails/phone numbers)
-- Invalid filenames
-- `PermissionError` when saving is blocked
-- `KeyboardInterrupt` (Ctrl+C) at any point
-- Any other unexpected exception, caught and reported without crashing
+<br/>
 
----
+## 🛠 Tech Stack
 
-## 🛠 Requirements
+<div align="center">
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![qrcode](https://img.shields.io/badge/qrcode-2ecc71?style=flat-square&logoColor=white)
+![Pillow](https://img.shields.io/badge/Pillow-e74c3c?style=flat-square&logoColor=white)
+
+</div>
+
+**Requirements:**
 - Python 3.8+
 - [`qrcode`](https://pypi.org/project/qrcode/)
 - [`Pillow`](https://pypi.org/project/Pillow/)
-
----
 
 ## ⚙️ Installation
 
@@ -81,15 +134,13 @@ output/my_qr.png
 # 1. Clone or download this folder
 cd Mini-Projects/QR-Code-Generator
 
-# 2. (Optional but recommended) create a virtual environment
+# 2. (Recommended) create a virtual environment
 python -m venv venv
-source venv/bin/activate      # on Windows: venv\Scripts\activate
+source venv/bin/activate      # Windows: venv\Scripts\activate
 
 # 3. Install dependencies
 pip install -r requirements.txt
 ```
-
----
 
 ## ▶️ How to Run
 
@@ -97,15 +148,11 @@ pip install -r requirements.txt
 python qr_code_generator.py
 ```
 
-Then just follow the on-screen menu — pick what you want to encode, tweak
-the size/color/format if you like, and your QR code lands in the `output/`
-folder.
+Follow the on-screen menu — choose what to encode, tweak size/color/format
+if you like, and your QR code lands in the `output/` folder.
 
-**Bulk mode:** choose option `2` from the main menu and point it at a `.txt`
-file with one item per line (URLs, text, whatever) — it'll generate
-`qr_1.png`, `qr_2.png`, etc. for every non-empty line.
-
----
+**Bulk mode:** pick option `2`, point it at a `.txt` file (one item per
+line), and it'll generate `qr_1.png`, `qr_2.png`, etc. for every entry.
 
 ## 📂 Folder Structure
 
@@ -117,52 +164,62 @@ Mini-Projects/
     ├── .gitignore
     ├── README.md
     ├── output/          # generated QR codes land here
-    └── assets/          # example images used in this README
+    └── assets/          # images used in this README
 ```
-
----
-
-## 🖼️ Example Output
-
-Input: `https://github.com/`
-Options: box size `10`, border `4`, error correction `High`, fill color `#2c3e50`
-
-```
-output/example_qr.png
-```
-
-![Example QR Code](assets/example_qr.png)
-
----
 
 ## 🧠 Concepts Practiced
+
 - CLI menu design and input-loop control flow
 - Input validation and defensive programming
-- Custom exceptions vs. built-in exception handling (`ValueError`, `PermissionError`, `KeyboardInterrupt`, `EOFError`)
-- String parsing & escaping (building the Wi-Fi QR payload per spec)
-- Working with the `qrcode` and `Pillow` libraries
-- Image manipulation (resizing, pasting, RGBA/RGB conversion for logos & transparency)
+- Exception handling (`ValueError`, `PermissionError`, `KeyboardInterrupt`, `EOFError`)
+- String parsing & escaping (Wi-Fi QR payload per spec)
+- Image manipulation with `Pillow` (resize, paste, RGBA/RGB conversion)
 - File I/O and safe path/filename handling
-- Writing modular, documented, beginner-friendly Python (constants, functions, docstrings)
+- Writing modular, documented, beginner-friendly Python
 
 ---
 
-## 🌟 Bonus Features
-- ⭐ Colored QR codes (custom fill color)
-- ⭐ Custom background color
-- ⭐ Transparent background
-- ⭐ Add a logo in the center
-- ⭐ Generate multiple QR codes from a text file
-- ⭐ Preview the QR code right after generation
-- ⭐ Export as SVG
-- ⭐ Export as JPG
+## 🗺️ Roadmap
+
+- [ ] Add a GUI version (Tkinter / PyQt)
+- [ ] Batch export to a single PDF sheet
+- [ ] Add QR code *scanning* / decoding support
+- [ ] Dark-mode themed QR presets
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📜 License
+
+This project is licensed under the **MIT License** — free to use, modify,
+and distribute.
 
 ---
 
-## 📌 Notes
-- For Wi-Fi QR codes, most phone cameras can scan the code and offer a
-  "Connect to Wi-Fi" prompt directly — no typing the password needed.
-- SVG output can't be opened with the built-in preview (no default image
-  viewer opens vector files) — open it in a browser or vector editor instead.
-- JPG doesn't support transparency, so a transparent QR saved as `.jpg`
-  will automatically be flattened onto a white background.
+## 👨‍💻 Author
+
+<div align="center">
+
+<img src="https://img.shields.io/badge/Author-Mayank%20Bisht-3498db?style=for-the-badge&logo=github&logoColor=white"/>
+
+**Mayank Bisht**
+*BCA Student — Data Science Specialization*
+
+Built with 💙, patience, and a healthy amount of `Ctrl+C` debugging.
+
+</div>
+
+<div align="center">
+
+### ⭐ If this project helped you, consider giving it a star!
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:3498db,100:2c3e50&height=100&section=footer" width="100%"/>
+
+</div>
